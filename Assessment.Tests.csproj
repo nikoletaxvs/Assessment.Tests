@@ -29,4 +29,8 @@
     <ProjectReference Include="..\Assessment\Assessment.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\CacheServiceTests\" />
+  </ItemGroup>
+
 </Project>
