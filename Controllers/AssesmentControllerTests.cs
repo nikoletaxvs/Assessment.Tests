@@ -57,12 +57,14 @@ namespace Assessment.Tests.Controllers
             // Arrange
             var requestObj = new RequestObj { RequestArrayObj = new List<int> { 3, 1, 5, 2 } };
             IEnumerable<int> numbers = requestObj.RequestArrayObj;
-            A.CallTo(() => assessmentController.FindSecondLargest(numbers)).Returns(3);
+            //A.CallTo(() => assessmentController.FindSecondLargest(numbers)).Returns(3);
             // Act
             var result = await assessmentController.FindSecondLargestFromList(requestObj);
 
             // Assert
             result.Should().NotBeNull();
+            result.Should().BeOfType(typeof(OkObjectResult));
+            
         }
 
     }
